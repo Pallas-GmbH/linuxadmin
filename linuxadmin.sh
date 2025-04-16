@@ -1,5 +1,5 @@
 #!/bin/bash
-# Version 2.1
+# Version 2.1 von Onur Köklük (Pallas² GmbH)
 # Funktion zur Anzeige der Hilfe
 show_help() {
     echo "Verwendung: $0 [Optionen]"
