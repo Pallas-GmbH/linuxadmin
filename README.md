@@ -7,13 +7,13 @@ Dieses Bash-Skript ermöglicht die automatisierte Ausführung von Verwaltungsskr
 - Bash Shell
 - SSH-Zugriff zu den Zielservern
 - Konfigurierte SSH-Schlüssel für passwortlose Authentifizierung
-- Ausführungsrechte für das Skript (`chmod +x linuxadmin2.sh`)
+- Ausführungsrechte für das Skript (`chmod +x linuxadmin.sh`)
 
 ## 3. Installation und Verzeichnisstruktur
 
 ```bash
 /
-├── linuxadmin2.sh
+├── linuxadmin.sh
 ├── hosts.ini
 └── scripts/
     ├── globalscripts/
@@ -34,12 +34,12 @@ firma2-server1
 
 ### Interaktiver Modus:
 ```bash
-./linuxadmin2.sh
+./linuxadmin.sh
 ```
 
 ### Nicht-interaktiver Modus:
 ```bash
-./linuxadmin2.sh -c [FIRMA] -s [SKRIPTPFAD] (-a|-t [SERVER])
+./linuxadmin.sh -c [FIRMA] -s [SKRIPTPFAD] (-a|-t [SERVER])
 ```
 
 ## 5. Befehlszeilenoptionen
@@ -68,17 +68,17 @@ SCP:/lokaler/pfad:/remote/pfad
 
 ### Alle Server einer Firma auflisten:
 ```bash
-./linuxadmin2.sh -lsrv firma1
+./linuxadmin.sh -lsrv firma1
 ```
 
 ### Skript auf allen Servern einer Firma ausführen:
 ```bash
-./linuxadmin2.sh -c firma1 -s scripts/globalscripts/update.sh -a
+./linuxadmin.sh -c firma1 -s scripts/globalscripts/update.sh -a
 ```
 
 ### Skript auf einzelnem Server ausführen:
 ```bash
-./linuxadmin2.sh -c firma1 -s scripts/customerscripts/firma1/backup.sh -t firma1-server1
+./linuxadmin.sh -c firma1 -s scripts/customerscripts/firma1/backup.sh -t firma1-server1
 ```
 
 ## 8. Fehlerbehandlung
