@@ -99,3 +99,26 @@ Bei Problemen prüfen Sie:
 - Berechtigungen der Skriptdateien
 - Korrekte Syntax in hosts.ini
 - Vorhandensein der Skriptverzeichnisse
+
+## Extras
+Schneller auf die Server via SSH zugreifen:
+Wenn in der hosts.ini eine Zeile mit kunde1-server steht, dann können Sie nach dem Laden der .bashrc einfach kunde1-server in die Kommandozeile eingeben, und es wird automatisch eine SSH-Verbindung als root-Benutzer zu diesem Server hergestellt (ssh root@kunde1-server).
+Damit das funktioniert müssen folgende Zeilen angepasst in die .bashrc eingetragen werden:
+```bash
+cd ~/linuxadmin/
+# Jede Zeile in der hosts.ini Datei lesen
+while IFS= read -r hostname
+do
+    # Leerzeilen oder Zeilen, die mit '#' beginnen, überspringen
+    if [[ -z "$hostname" || $hostname == \#* ]]; then
+        continue
+    fi
+    
+    # Alias-Befehl für den aktuellen Hostnamen generieren
+    alias $hostname='ssh benutzer@'$hostname
+done < ~/linuxadmin/hosts.ini
+
+```
+
+
+
