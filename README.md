@@ -100,6 +100,14 @@ Bei Problemen prüfen Sie:
 - Korrekte Syntax in hosts.ini
 - Vorhandensein der Skriptverzeichnisse
 
+## 11. Haftungsausschluss
+
+Die Nutzung des Skriptes erfolgt auf eigenes Risiko. Die Pallas² GmbH übernimmt keine Verantwortung oder Haftung für etwaige Schäden, Verluste oder Probleme, die durch die Nutzung des Skripts entstehen könnten. Dies schließt, aber ist nicht beschränkt auf, Datenverlust, Systemausfälle oder Sicherheitsverletzungen ein.
+
+Das Skript wird bereitgestellt, ohne jegliche ausdrückliche oder stillschweigende Garantien, einschließlich, aber nicht beschränkt auf, die Garantien der Marktgängigkeit, Eignung für einen bestimmten Zweck und Nichtverletzung. Der Nutzer ist allein verantwortlich für die Sicherstellung der ordnungsgemäßen Installation, Konfiguration und Nutzung des Skripts sowie für die Sicherung aller Daten und Systeme.
+
+Durch die Nutzung dieses Skripts stimmen Sie zu, dass die Entwickler nicht für direkte, indirekte, zufällige, spezielle oder Folgeschäden haften.
+
 ## Extras
 Schneller auf die Server via SSH zugreifen:
 Wenn in der hosts.ini eine Zeile mit kunde1-server steht, dann können Sie nach dem Laden der .bashrc einfach kunde1-server in die Kommandozeile eingeben, und es wird automatisch eine SSH-Verbindung als root-Benutzer zu diesem Server hergestellt (ssh root@kunde1-server).
